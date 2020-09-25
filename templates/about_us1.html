@@ -1,0 +1,95 @@
+{% extends "safespace/base.html" %}
+{% load fontawesome_5 %}
+{% block title %} About Us
+{% endblock %}
+{% block script%}
+   <!--- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"/> -->
+    <style>
+        #top{
+            text-align:center;
+            font-size:2.0em;
+            text-decoration:underline;
+            /*margin-bottom:5px;*/
+            background:#b2f5ea;
+            color:#e74c3c;
+        }
+        #us{
+            margin: 0px auto;
+            padding: 1.0em;
+            color:#000;
+            height:inherit;
+            width:inherit;
+            border-bottom:5px solid;
+            background:#b2f5ea;
+        }
+        .one{
+            padding:0.5em;
+            margin-top:0.2em;
+            margin-right:0.2em;
+        }
+        .one h1{
+            color:#e74c3c;
+            padding:5px;
+            border-bottom:2px solid;
+            text-align:right;
+            font-size:1.5em;
+        }
+        .one p{
+            margin-top:5px;
+            font-size:1.0em;
+        }
+        .one a{
+            color:#e74c3c;
+            padding:5px;
+            border-bottom:2px solid;
+            text-align:right;
+            font-size:1.0em;
+        }
+        .one h4{
+            text-decoration:underline;
+        }
+        .one:after{
+	        display:block;
+	        content:"";
+	        clear:both;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <h1 id="top">About Us</h1>
+    <section id="us">
+        <div class="one">
+            <h1>Why we created Safe Space?</h1><br>
+            <p>We started Safe Space to deal with mental health as it is the most underrated issue but with a serious need to be addressed. We all go through a low point in our lives, it is pretty common but still instead of dealing with it, we try to hide it. These kinds of feelings that we try to suppress and throw them back into the corner of our mind are more deadly than we think. They will grow in the least possible space and take over your mind before you know it.<br>
+
+            <br>We started Safe Space as we have personally felt the need of a platform where we can share our day, feelings and sh*t that we are going through. We are so busy focusing on our problems that we forget the need to comfort each other during the lows. So we are trying to give back humanity the most important essence “love”.
+            </p>
+        </div> 
+        <div class="one">
+            <h1>Why use Safe Space?</h1>
+            <p>You might think that Safe Space is only for depressed or psychologically unwell people. Sadly, you are mistaken, it is for everyone. Anyone who feels the need to talk to someone, we are here. If you want a free non-judgmental advice, you know where to go. If you are not able to sleep at midnight, we will be very happy to sing you a lullaby. If you are new to a town and are struggling to find new friends, don’t worry we will be there for you whether you are in Antarctica or Sahara.<br>
+            
+            <br>We are here to listen about your 6A.M jog, about your presentations, about your meals. So basically we are here to cherish your whole day cause trust us every day is special to us.
+            </p>
+        </div>
+        <div class="one">
+            <h1>What keeps us going?</h1>
+            <p>We are a non-profitable organization. As we mentioned above our main motive is to create such culture in which people are no longer afraid of expressing themselves.<br></p>
+            <h1>How will we help you?</h1>
+            <p>It's an anxious turmoil in the beginning, an unknown fear of what's to come but the reciprocating makes it easier. Sharing your day, thoughts and feelings with a person who is just there for you.<br>
+                A Space to talk out all the negativity<br>
+                We'll help you pick up all the shattered glass from previous experiences and try to turn into a mirror where you can reflect yourself fearlessly.
+            </p>  
+        </div>   
+        <div class="one">
+            <h1>Pioneers</h1>
+            <p>We are just a bunch of teenagers with a thirst of exposure and an iron will to make world a better place.<br>
+            </p>
+            <h4>Co-Visionaries:</h4>
+            <p>Amra Hathidara<br>Dhyey Javiya<br>Harsh Kansara<br>Keval Patel<br>Krishang Shah<br>Madhvendra Ranavat<br>Shubh Patel<br>Vraj Desai<br></p>
+        </div>
+        <div class="one">
+            <a href="/login/">Go to Log-In page</a>
+        </div>
+    </section>
+{% endblock %}

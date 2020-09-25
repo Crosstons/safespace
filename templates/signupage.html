@@ -1,0 +1,193 @@
+{% load static from static %}
+<html>
+<head>
+      <title>Safe Space || Sign-Up</title>
+      <link rel="stylesheet" type="text/css" href="assets\css\register.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="shortcut icon" href="{% static 'safespace/LOGO2.jpg' %}">
+      <meta charset="utf-8">
+</head>
+<body>
+     <div class="loginbox">
+          <h1 id="timepass">Safe Space</h1>
+          <h1>Sign Up</h1>
+         <form name="signup" onsubmit="return myfun()" method="POST">
+          {% csrf_token %}
+            {{form}}
+             <p><input type="radio" name="hg" required>I accept the<a href=""> Terms & Conditions</a> and the<a href=""> Privacy Policy</a> of this website</p>
+             <br><br><input type="submit" name="submit" value="Sign Up">
+         </form>
+          <h2>
+          Relax Your Information Is Not Visible To Us</br>
+          It Is Just For Authentication Purpose</br>
+          </h2>
+    
+    
+    </div>
+</body>
+<style>
+body{
+    margin: 0;
+    padding: 0;
+    background-color: teal;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.loginbox{
+    width: 68%;
+    height: auto;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border-radius: 40px;
+    padding: 10% 10%;
+    opacity: 0.87;
+    margin-top:15%;
+    margin-bottom: 10%;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+    
+    
+}
+h1{
+    margin: 0;
+    padding: 0 0 0.7em;
+    text-align: center;
+    font-size: 2.0em;
+    
+}
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+.loginbox input[type="text"], input[type="password"], input[type="tel"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.loginbox input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: teal;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.loginbox input[type="submit"]:hover{
+    cursor: pointer;
+    background: aqua;
+    color: black;
+}
+.loginbox a{
+    text-decoration: none;
+    font-size: 0.8em;
+    line-height: 20px;
+    color: darkgrey;
+    margin-top:15px;
+}
+.loginbox a:hover{
+    color: aqua;
+}
+h2{
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 16px;
+}
+#timepass{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 2.0em;
+    text-decoration: underline;
+}
+.loginbox span{
+    display:none;
+}
+@media screen and (max-width: 704px){
+        .loginbox{
+                width: 68%;
+                height: auto;
+                background: #000;
+                color: #fff;
+                top: 50%;
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%,-50%);
+                box-sizing: border-box;
+                border-radius: 40px;
+                padding: 10% 10%;
+                opacity: 0.87;
+                margin-top:100px;
+            }
+        h1{
+                margin: 0;
+                padding: 0 0 0.7em;
+                text-align: center;
+                font-size: 2.0em;
+
+            }
+        #timepass{
+                margin: 0;
+                padding: 0 0 20px;
+                text-align: center;
+                font-size: 2.0em;
+                text-decoration: underline;
+            }
+        #rad, #rad_one{
+          display:inline-block;
+        }
+        
+    }
+</style>
+<script>
+	function myfun () {
+  var a = document.signup.password1.value;
+  var b = document.signup.password2.value;
+  var c = document.signup.email.value;
+
+  if (a=="") {
+  	alert("Please fill Password");
+    return false;
+  }
+ else if(a.length<8){
+
+  alert("Password must be greater than 7 characters");
+   return false;
+
+ }
+ else if(a.length>12){
+    alert("Password must be less than 12 characters");
+    return false;
+  }
+if (a!=b) {
+alert("Password is not confirmed");
+return false;
+}
+else{
+return true;
+  }
+}
+</script>
+</html>

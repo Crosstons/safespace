@@ -1,0 +1,40 @@
+{% extends "safespace/base.html" %}
+{% load static %}
+{% load fontawesome_5 %}
+{% block title %}
+{% endblock %}
+{% block script%}
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/5341b83533.js" crossorigin="anonymous"></script>
+{% endblock %}
+{% block content %}
+
+
+<section class="bg-teal-200 text-black body-font">
+        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+        <div class="text-center lg:w-2/4 w-full md:inline">
+
+            <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="{% static 'safespace\ddt.jpg' %}" id="tp_1" >
+              <a class="inline-flex text-white bg-teal-600 border-2 border-teal-600 py-2 px-6 focus:outline-none transition  hover:bg-teal-800 hover:border-teal-800 duration-700 rounded text-lg cursor-pointer" id="btn1" href="/chat/">CHATS<i class="w-5 px-3 py-1">{% fa5_icon 'comment' %}</i></a>
+              <a class="ml-4 inline-flex text-black bg-transparent border-2 border-teal-600 py-2 px-6 focus:outline-none transition hover:bg-teal-600 duration-700 rounded text-lg cursor-pointer" id="btn2" href="/library/">LIBRARY<i class="w-5 px-3 py-1">{% fa5_icon 'book-open' %}</i></a><br>
+              <a class="ml-4 inline-flex text-blackbg-transparent border-2 border-teal-600 py-2 px-6 focus:outline-none transition hover:bg-teal-600 duration-700 py-2 px-6 focus:outline-none hover:bg-black-400 rounded text-lg cursor-pointer" id="btn3" href="/practices/">PRACTICES<i class="w-5 px-3 py-1">{% fa5_icon 'praying-hands' %}</i></a>
+              <a class="inline-flex text-white bg-teal-600 border-2 border-teal-600 py-2 px-6 focus:outline-none transition  hover:bg-teal-800 hover:border-teal-800 duration-700 rounded text-lg cursor-pointer" id="btn4" href="/faqs/">FAQS<i class="w-5 px-3 py-1">{% fa5_icon 'question-circle' %}</i></a>
+            </div>
+        </div>
+</section>
+{% endblock%}
+
+{% block style %}
+    <style>
+      #btn1, #btn2, #btn3, #btn4{
+        margin: 0.5em;
+      }
+      #tp_1{
+        margin-left: 10px auto;
+        width: 100%;
+        border: 0.9em;
+        border-style: double;
+        border-color: darkcyan;
+      }
+    </style>
+{% endblock %}

@@ -1,0 +1,76 @@
+.container {
+    font-size: 1.25em;
+}
+
+.navbar .nav-item a {
+    color: white !important;
+    margin: 5px !important;
+    padding: 5px;
+    text-align: inherit;
+    font: inherit;
+    list-style: none;
+    text-decoration: none !important;
+}
+
+nav li a:hover {
+    background-color: rgb(40, 30, 7);
+}
+
+#id_nav_avatar {
+    height: auto;
+    width: auto;
+    max-height: 42px;
+    max-width: 42px;
+    border-radius: 100%;
+}
+
+.nav-item .dropdown-menu .dropdown-item {
+    color: black !important;
+}
+
+#doneLabel:hover {
+    background-color: grey;
+}
+
+.notification {
+    background-color: #555 !important;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 15px 26px !important;
+    position: relative !important;
+    display: inline-block !important;
+    border-radius: 2px !important;
+}
+
+
+.notification .badge {
+    position: absolute !important;
+    top: -10px !important;
+    right: -10px !important;
+    padding: 5px 10px !important;
+    border-radius: 50% !important;
+    background-color: red !important;
+    color: white !important;
+}
+
+#notificationDropMenu {
+    overflow: scroll;
+    width: 430px;
+    max-height: 568px;
+}
+
+@media screen and (max-width: 776px) {
+    #notificationDropMenu {
+        max-width: 45vw;
+    }
+}
+
+#signupFloatForm,
+#loginFloatForm {
+    background: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+}
+
+.oldUser {
+    border: 5px groove gold;
+}

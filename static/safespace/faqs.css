@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  background: #f8f9fb;
+}
+
+.wrapper{
+	max-width: 500px;
+	width: 90%;
+	margin: 0px auto;
+}
+
+.wrapper .title{
+	margin-bottom: 25px;
+	background: #1b5c5c;
+	padding: 20px;
+	font-size: 20px;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 2px;
+	font-weight: 700;
+}
+
+.wrapper .accordion_item{
+	margin-bottom: 25px;
+	box-shadow: 0 0 5px rgba(225,225,225,0.5);
+}
+
+.wrapper .accordion_item .accordion_tab{
+	background: #DEFFFF;
+	padding: 20px;
+	color: #2e3038;
+	font-size: 18px;
+	font-weight: 600;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.wrapper .accordion_item .accordion_tab.active{
+	color: #fff;
+	background: #24716F;
+}
+
+.wrapper .accordion_item .accordion_tab .arrow{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 20px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #01ffffa6;
+}
+
+.wrapper .accordion_item .accordion_tab .arrow img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 13px;
+	height: 13px;
+}
+
+.wrapper .accordion_item .accordion_tab.active .arrow{
+	background: #01ffffa6;
+
+}
+
+.wrapper .accordion_item .accordion_tab.active .arrow img{
+	transform: translate(-50%,-50%) rotate(180deg);
+	transition: all 0.3s ease;
+}
+
+.wrapper .accordion_item .accordion_content{
+	background: #fff;
+	display: none;
+	transition: all 0.3s ease;
+}
+
+.wrapper .accordion_item .accordion_content p{
+	font-size: 14px;
+	line-height: 22px;
+	padding: 20px;
+	color: #858aa5; 
+}
+
+.wrapper .accordion_item .accordion_tab.active + .accordion_content{
+	display: block;	
+	transition: all 0.3s ease;
+}

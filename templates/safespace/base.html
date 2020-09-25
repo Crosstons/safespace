@@ -1,0 +1,167 @@
+{% load static %}
+<html>
+<head> 
+    <title>Safe Space || {% block title %} {% endblock %}</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5341b83533.js" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
+    <link rel="shortcut icon" href="{% static 'safespace/LOGO2.jpg' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    {% block script %} {% endblock %}
+    <script>
+  function openSlideMenu(){
+    document.getElementById('menu').style.width = '40%';
+    document.getElementById('menu').style.height = '100%';
+    document.getElementById('menu').style.overflow = 'scroll';
+    document.getElementById('content').style.marginLeft = '250px';
+    document.getElementById("v_1").style.display = 'none';
+          }
+  function closeSlideMenu(){
+    document.getElementById('menu').style.width = '0';
+    document.getElementById('content').style.marginLeft = '0';
+    document.getElementById("v_1").style.display = 'inherit';
+          }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Catamaran:800');
+
+        body {
+          font-family: 'Catamaran', sans-serif;
+        }
+        .nav {
+          height: 100%;
+          width: 0;
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #2D3135;
+          opacity: 1.0;
+          overflow-x: hidden;
+          padding-top: 60px;
+          transition: 0.7s;
+        }
+        .nav ul {
+          padding: 0;
+        }
+        .nav li:hover {
+          border-left: 9px solid #008080;
+          background-color: #34383D;
+        }
+        .nav a {
+          display: block;
+          padding: 20px 30px;
+          font-size: 1.0em;
+          text-decoration: none;
+          color: #ccc;
+        }
+        .nav a:hover {
+          color: #fff;
+          transition: 0.4s;
+        }
+        .nav .close {
+          position: absolute;
+          top: 0;
+          right: 22px;
+          margin-left: 50px;
+          font-size: 30px
+        }
+        .slide a {
+          color: #008080;
+          font-size: 2.0em;
+        }
+        #content {
+          padding: 20px;
+          transition: margin-left 0.7s;
+          overflow: hidden;
+            width: 100%;}
+        #cut, #tit, #bit{
+                display: inline-block;
+            }
+    </style>
+</head>
+<body class="bg-teal-400">
+    <header class="text-black-700 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row" id="bit">
+          <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto" id="cut">
+              <div id="content">
+
+                <span class="slide">
+                    <a onclick="openSlideMenu()">
+                    <span id="v_1"><i class="fas fa-bars"></i></span>
+                    </a>
+                </span>
+
+                  <div id="menu" class="nav">
+                    <a class="close" onclick="closeSlideMenu()">
+                      <i class="fas fa-times"></i>
+                    </a>
+                        <ul>
+                          <li><a href="/home/">Home</a></li>
+                          <li><a href="/chat/">Chats</a></li>
+                          <li><a href="/library/">Library</a></li>
+                          <li><a href="/practices/">Practices</a></li>
+                          <li><a href="/faqs/">FAQS</a></li>
+                          <li><a href="/about_us/">About us</a></li><br><br>
+                          <li><a href="/changepassword/">Change Password</a></li>
+                          <li><a href="/logout/">Log Out</a></li>
+                        </ul>
+                  </div>
+                </div>
+          </nav>
+          <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-black-900 lg:items-center lg:justify-center mb-4 md:mb-0 font-extrabold" id="tit">
+            <span class="ml-3 text-4xl sm:justify-center">Safe<i class="fas fa-lock w-5 opacity-50 mr-5 ml-3 sm:justify-cente"></i>Space</span>
+          </a>
+          <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+            
+          </div>
+        </div>
+      </header>
+
+      {% block content %}
+
+      {% endblock %}
+
+      <footer class="text-black-700 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-black-900">
+            <span class="ml-3 text-xl">Safe<i class="fas fa-lock w-5 opacity-50 mr-2 ml-2"></i>Space</span>
+          </a>
+          <p class="text-sm text-black-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-black-200 sm:py-2 sm:mt-0 mt-4">© 2020 Safe Space —
+            <a href="" class="text-black-600 ml-1" rel="noopener noreferrer" target="_blank">safespace2509@gmail.com</a><br>
+            <a href="" class="text-black-600 ml-1" rel="noopener noreferrer" target="_blank">Terms & Conditions</a><br>
+            <a href="" class="text-black-600 ml-1" rel="noopener noreferrer" target="_blank">Privacy Policy</a>
+          </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a class="text-black-500" href="">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-black-500" href="https://twitter.com/SafeSpa78729577?s=08">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-black-500" href="https://www.instagram.com/safespace2509">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            
+          </span>
+        </div>
+      </footer>
+</body>
+{% block style %} {% endblock %}
+<script>
+window.addEventListener('mouseup', function(event)){
+  var box = document.getElementById('menu');
+  if(event.target != box && event.target.parentNode != box){
+    box.style.display = 'none';
+  }
+}
+</script>
+</html>

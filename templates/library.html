@@ -1,0 +1,227 @@
+{% extends "safespace/base.html" %}
+{% load fontawesome_5 %}
+{% block title %}Library{% endblock %}
+{% load static %}
+
+{% block script%}
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <style>
+   * { box-sizing: border-box;
+
+ }
+
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: #4fd1c5;
+}
+
+.carousel-cell {
+  width: 28%;
+  height: 200px;
+  margin-right: 10px;
+  background: rgb(87, 211, 83);
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+    .carousel-cell img{
+      height:inherit;
+      width:inherit;
+    }
+
+.carousel-cell.is-selected {
+  background: #ED2;
+}
+/* Videos */
+.carousel-book:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-book);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+.carousel-book {
+    width: 66%;
+    height: 300px;
+    margin-right: 10px;
+    border-radius: 5px;
+    counter-increment: carousel-book;
+  }
+  .carousel-cell a{
+      height:inherit;
+      width:inherit;
+    }
+    .carousel-cell img{
+      height:inherit;
+      width:inherit;
+    }
+  
+  .carousel-book:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-book);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+    display:none;
+  }
+h1{
+    margin-left: 25px;
+    margin-top: 20px;
+    font-size: 45px;
+}
+h3{
+    margin-left: 25px;
+    margin-top: 20px;
+    padding-bottom:15px;
+}
+
+@media screen and (max-width:640px){
+    .carousel-cell {
+        width: 140px;
+        height: 208px;
+    }
+    .carousel-book {
+        width: 336px;
+        height: 189px;
+    }
+    .carousel-cell img{
+      height:inherit;
+      width:inherit;
+    }
+}
+@media screen and (max-width:768px){
+    .carousel-cell {
+        width: 200px;
+        height: 240px;
+    }
+    .carousel-book {
+        width: 380px;
+        height: 220px;
+    }
+    .carousel-cell img{
+      height:inherit;
+      width:inherit;
+    }
+}
+@media screen and (max-width:1024px){
+    .carousel-cell {
+        width: 276px;
+        height: 348px;
+    }
+    .carousel-book {
+        width: 475px;
+        height: 328px;
+    }
+    .carousel-cell img{
+      height:inherit;
+      width:inherit;
+    }
+}
+@media screen and (min-width:1024px){
+    .carousel-cell {
+        width: 276px;
+        height: 348px;
+    }
+    .carousel-book {
+        width: 475px;
+        height: 328px;
+    }
+    .carousel-cell img{
+      height:inherit;
+      width:inherit;
+    }
+}
+
+    </style>
+{% endblock script%}
+
+{% block content %}
+                                <!--Quotes-->
+    <h1>Quotes</h1>
+    <h3>Make sure to have a postive note everyday</h3>
+<div class="carousel" data-flickity='{ "wrapAround": true }'>
+  <div class="carousel-cell"><img src="{% static 'safespace/Q1.jpg' %}" onclick="toggleFullscreen(this);"/></div>
+  <div class="carousel-cell"><img src="{% static 'safespace/Q2.jpg' %}" onclick="toggleFullscreen(this);"/></div>
+  <div class="carousel-cell"><img src="{% static 'safespace/Q3.jpg' %}" onclick="toggleFullscreen(this);"/></div>
+  <div class="carousel-cell"><img src="{% static 'safespace/Q4.jpg' %}" onclick="toggleFullscreen(this);"/></div>
+  <div class="carousel-cell"><img src="{% static 'safespace/Q5.jpg' %}" onclick="toggleFullscreen(this);"/></div>
+  <div class="carousel-cell"><img src="{% static 'safespace/Q6.jpg' %}" onclick="toggleFullscreen(this);"/></div>
+  <div class="carousel-cell"><img src="{% static 'safespace/Q7.jpg' %}" onclick="toggleFullscreen(this);"/></div>
+  <div class="carousel-cell"><img src="{% static 'safespace/Q8.jpg' %}" onclick="toggleFullscreen(this);"/></div>
+  <div class="carousel-cell"><img src="{% static 'safespace/Q9.jpg' %}" onclick="toggleFullscreen(this);"/></div>
+  <div class="carousel-cell"><img src="{% static 'safespace/Q10.jpg' %}" onclick="toggleFullscreen(this);"/></div>
+  <div class="carousel-cell"><img src="{% static 'safespace/Q11.jpg' %}" onclick="toggleFullscreen(this);"/></div>
+    <div class="carousel-cell"><img src="{% static 'safespace/Q12.jpg' %}" onclick="toggleFullscreen(this);"/></div>
+</div>
+    </div>
+                                 <!--Books-->
+    <h1>Books</h1>
+    <h3>Reads that are worth your time and mind</h3>
+    <div class="carousel" data-flickity='{ "wrapAround": true }'>
+        <div class="carousel-cell"><img src="{% static 'safespace/B5.jpeg' %}"/></div>
+        <div class="carousel-cell"><img src="{% static 'safespace/B6.jpeg' %}"/></div>
+        <div class="carousel-cell"><img src="{% static 'safespace/B3.jpg' %}"/></div>
+        <div class="carousel-cell"><img src="{% static 'safespace/B4.jpg' %}"/></div>
+        <div class="carousel-cell"><img src="{% static 'safespace/B1.jpg' %}"/></div>
+      </div>
+                                   <!--Videos-->    
+          <h1>Videos</h1>
+          <h3>Fresh from the tapes</h3>
+    <div class="carousel" data-flickity='{ "wrapAround": true }'>
+        <div class="carousel-book"><iframe width="560" height="315" src="https://www.youtube.com/embed/RaYrKd5oelc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </div>
+
+                                    <!--Songs-->
+      <h1>Songs</h1>
+      <h3>Songs to put you in mood and make your body Groove</h3>
+      <div class="carousel" data-flickity='{ "wrapAround": true }'>
+        <div class="carousel-cell"><a href="https://www.google.com/search?gs_ssp=eJzj4tVP1zc0TCrPy8g1sDAzYPQSTExPLFIoKc1VKE5MLMlQyMgHALJ_Cr4&q=agar+tum+saath+ho&oq=AGAR&aqs=chrome.1.69i59j46j69i57j0j46l2j0l2.6653j0j7&sourceid=chrome&ie=UTF-8"><img src="{% static 'safespace/S1.jpg' %}"/></a></div>
+        <div class="carousel-cell"><a href=" https://www.youtube.com/watch?v=sCMNen9q3fI&ab_channel=SonyMusicIndiaVEVO"><img src="{% static 'safespace/S2.jpg' %}"/></a></div>
+        <div class="carousel-cell"><a href="https://www.youtube.com/watch?v=Fz_nBCtgjGU&ab_channel=Flawes"><img src="{% static 'safespace/S3.jpg' %}"/></a></div>
+        <div class="carousel-cell"><a href="https://www.youtube.com/watch?v=tlILlcCE8Sc&ab_channel=ChainsmokersVEVO"><img src="{% static 'safespace/S4.jpg' %}"/></a></div>
+      </div>
+
+                                    <!--Movies-->
+      <h1>Movies</h1>
+      <h3>Some flicks not to miss</h3>
+      <div class="carousel" data-flickity='{ "wrapAround": true }'>
+          <div class="carousel-book"><a href="https://www.imdb.com/title/tt0454921/"><img src="{% static 'safespace/M1.jpg' %}"/></a></div>
+          <div class="carousel-book"><a href="https://www.imdb.com/title/tt0380389/"><img src="{% static 'safespace/M2.jpg' %}"/></a></div>
+          <div class="carousel-book"><a href="https://www.imdb.com/title/tt1230168/"><img src="{% static 'safespace/M3.jpg' %}"/></a></div>
+    
+       </div>
+      <script>
+  function toggleFullscreen(elem) {
+  elem = elem || document.documentElement;
+  if (!document.fullscreenElement && !document.mozFullScreenElement &&
+    !document.webkitFullscreenElement && !document.msFullscreenElement) {
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+}
+
+      </script>
+{% endblock content %}
+{% block style %} {% endblock %}

@@ -1,0 +1,76 @@
+{% extends "safespace/base.html" %}
+{% load static %}
+{% block title %} FAQS
+{% endblock %}
+{% block script%}
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".accordion_tab").click(function(){
+            $(this).toggleClass("active");
+				});
+			});
+
+
+    </script>
+    <link rel="stylesheet" href="{% static 'safespace\faqs.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="wrapper">	
+        <div class="title">Frequently Asked Questions</div>
+    
+        <div class="accordion_wrapper">	
+            <div class="accordion_item">
+                <div class="accordion_tab active">Question
+                    <div class="arrow">
+                        <img src="https://i.imgur.com/XuM2oTr.png" alt="arrow">
+                    </div>
+                </div>
+                <div class="accordion_content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati asperiores, et, odit explicabo nesciunt temporibus sit inventore sapiente vitae a ipsum dicta deserunt repellat aut!</p>
+                </div>
+            </div>
+            <div class="accordion_item">
+                <div class="accordion_tab">Question 1
+                    <div class="arrow">
+                        <img src="https://i.imgur.com/XuM2oTr.png" alt="arrow">
+                    </div>
+                </div>
+                <div class="accordion_content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati asperiores, et, odit explicabo nesciunt temporibus sit inventore sapiente vitae a ipsum dicta deserunt repellat aut!</p>
+                </div>
+            </div>
+            <div class="accordion_item">
+                <div class="accordion_tab">Question 2
+                    <div class="arrow">
+                        <img src="https://i.imgur.com/XuM2oTr.png" alt="arrow">
+                    </div>
+                </div>
+                <div class="accordion_content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati asperiores, et, odit explicabo nesciunt temporibus sit inventore sapiente vitae a ipsum dicta deserunt repellat aut!</p>
+                </div>
+            </div>
+            <div class="accordion_item">
+                <div class="accordion_tab">Question 3
+                    <div class="arrow">
+                        <img src="https://i.imgur.com/XuM2oTr.png" alt="arrow">
+                    </div>
+                </div>
+                <div class="accordion_content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati asperiores, et, odit explicabo nesciunt temporibus sit inventore sapiente vitae a ipsum dicta deserunt repellat aut!</p>
+                </div>
+            </div>
+            <div class="accordion_item">
+                <div class="accordion_tab">Question 4
+                    <div class="arrow">
+                        <img src="https://i.imgur.com/XuM2oTr.png" alt="arrow">
+                    </div>
+                </div>
+                <div class="accordion_content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati asperiores, et, odit explicabo nesciunt temporibus sit inventore sapiente vitae a ipsum dicta deserunt repellat aut!</p>
+                </div>
+            </div>
+        </div>
+    </div>	
+{% endblock %}
